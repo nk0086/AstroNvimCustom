@@ -11,7 +11,10 @@ return {
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
+        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr)
+          require("astronvim.utils.buffer").close(
+            bufnr)
+        end)
       end,
       desc = "Pick to close",
     },
@@ -21,17 +24,17 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
-    ["<leader>gn"] = {"<Cmd>Neogit<cr>", desc = "Neogit"},
-    [";"] = {":"}
+    ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
+    [";"] = { ":" }
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
   i = {
-    ["<C-f>"] = {"<C-g>U<ESC><S-a>"}
+    ["<C-f>"] = { "<C-g>U<ESC><S-a>" }
   },
   v = {
-    ["<C-y>"] = {"\"+y"}
+    ["<C-y>"] = { "\"+y" }
   }
 }

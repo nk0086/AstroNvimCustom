@@ -14,4 +14,35 @@ return {
       }
     end,
   },
+
+  {
+    "machakann/vim-sandwich",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    versiont = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "vim-skk/skkeleton",
+    lazy = false,
+    dependencies = { "vim-denops/denops.vim" },
+    init = function()
+      vim.api.nvim_create_autocmd("User", {
+        pattern = "skkeleton-initialize-pre",
+        callback = function()
+          vim.fn["skkeleton#config"] {
+            eggLikeNewline = true,
+            globalDictionaries = {
+              "~/.config/eskk/SKK-JISYO.L",
+            },
+          }
+        end,
+      })
+    end,
+  },
 }
