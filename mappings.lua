@@ -21,10 +21,17 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
-    ["<leader>gn"] = {":Neogit<cr>", desc = "Neogit"},
+    ["<leader>gn"] = {"<Cmd>Neogit<cr>", desc = "Neogit"},
+    [";"] = {":"}
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  i = {
+    ["<C-f>"] = {"<C-g>U<ESC><S-a>"}
+  },
+  v = {
+    ["<C-y>"] = {"\"+y"}
+  }
 }
