@@ -32,7 +32,9 @@ return {
     -- ["<esc>"] = false,
   },
   i = {
-    ["<C-f>"] = { "<C-g>U<ESC><S-a>" }
+    ["<C-f>"] = { "<C-g>U<ESC><S-a>" },
+    ["<C-j>"] = { "<Plug>(skkeleton-enable)" },
+    ["<C-k>"] = { "<Plug>(skkeleton-disable)" },
   },
   v = {
     ["<C-y>"] = { "\"+y" }
