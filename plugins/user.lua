@@ -28,6 +28,13 @@ return {
   },
 
   {
+    -- Denoでvimプラグインが動作するようになるやつ
+    "vim-denops/denops.vim",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+  },
+
+  {
     "vim-skk/skkeleton",
     lazy = false,
     dependencies = { "vim-denops/denops.vim" },
@@ -45,4 +52,11 @@ return {
       })
     end,
   },
+
+  {
+    "rhysd/clever-f.vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
 }
