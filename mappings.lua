@@ -37,6 +37,6 @@ return {
     ["<C-k>"] = { "<Plug>(skkeleton-disable)" },
   },
   v = {
-    ["<C-y>"] = { "\"+y" }
+    -- visual mode key mapping
   }
 }
