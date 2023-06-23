@@ -25,7 +25,18 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
-    [";"] = { ":" }
+    [";"] = { ":" },
+
+    -- resize
+    ["<C-r>"] = { ":WinResizerStartResize<cr>" },
+
+    -- split
+    ["<C-s>"] = { "<C-w>v", desc = "Split window vertically" },
+    ["<C-t>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Toggle vertical terminal" },
+
+    -- vim-visual-multi
+    ["<A-k>"] = { "<cmd>call vm#commands#add_cursor_up(0, v:count1)<cr>" },
+    ["<A-j>"] = { "<cmd>call vm#commands#add_cursor_down(0, v:count1)<cr>" },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -33,10 +44,11 @@ return {
   },
   i = {
     ["<C-f>"] = { "<C-g>U<ESC><S-a>" },
-    ["<C-j>"] = { "<Plug>(skkeleton-enable)" },
-    ["<C-k>"] = { "<Plug>(skkeleton-disable)" },
+    ["<C-j>"] = { "<Plug>(skkeleton-toggle)" },
   },
   v = {
     -- visual mode key mapping
+    ["J"] = { ":move '>+1<CR>gv-gv", desc = "Move lines of code up" },
+    ["K"] = { ":move '<-2<CR>gv-gv", desc = "Move lines of code down" },
   }
 }

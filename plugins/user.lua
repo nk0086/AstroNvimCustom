@@ -16,7 +16,7 @@ return {
   },
 
   {
-    "machakann/vim-sandwich",
+    "tpope/vim-surround",
     version = "*",
     event = "VeryLazy",
   },
@@ -67,6 +67,24 @@ return {
 
   {
     "ktakayama/gpt-commit-msg.vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "simeji/winresizer",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "mg979/vim-visual-multi",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "kkoomen/vim-doge",
     version = "*",
     event = "VeryLazy",
   },
