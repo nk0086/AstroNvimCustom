@@ -59,4 +59,16 @@ return {
     event = "VeryLazy",
   },
 
+  {
+    "rhysd/git-messenger.vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "ktakayama/gpt-commit-msg.vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
 }
