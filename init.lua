@@ -85,13 +85,20 @@ return {
     -- gpt-commit-msg
     vim.g.gpt_commit_msg = vim.empty_dict()
     vim.g.gpt_commit_msg.api_key = vim.fn.getenv("OPENAI_API_KEY")
+    -- vim-sandwich
+    vim.g['sandwich#recipes'] = {}
+    table.insert(vim.g['sandwich#recipes'], {
+      external = { 'it', 'at' },
+      noremap = 1,
+      filetype = { 'html' },
+      input = { 't' },
+    })
   end,
-
 
   vim.cmd([[
   augroup GptCommitMsg
       autocmd!
       autocmd VimEnter * let g:gpt_commit_msg = get(g:, 'gpt_commit_msg', {}) | let g:gpt_commit_msg['api_key'] = $OPENAI_API_KEY
   augroup END
-  ]])
+  ]]),
 }

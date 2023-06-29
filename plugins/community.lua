@@ -5,7 +5,7 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   -- { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.colorscheme.nightfox-nvim" },
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
@@ -32,6 +32,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   {
     -- further customize the options set by the community
+    -- gitcommit enables copilot for git commit messages
     "copilot.lua",
     opts = {
       suggestion = {

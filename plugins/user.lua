@@ -16,7 +16,7 @@ return {
   },
 
   {
-    "tpope/vim-surround",
+    "machakann/vim-sandwich",
     version = "*",
     event = "VeryLazy",
   },
@@ -89,4 +89,9 @@ return {
     event = "VeryLazy",
   },
 
+  {
+    "mattn/emmet-vim",
+    version = "*",
+    event = "VeryLazy",
+  },
 }

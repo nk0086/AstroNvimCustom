@@ -23,8 +23,6 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-
-    ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
     [";"] = { ":" },
 
     -- resize
@@ -41,6 +39,7 @@ return {
     -- telescope
     ["<leader>gg"] = { "<cmd>Telescope git_commits<cr>", desc = "Find a commit history in current file" },
     ["<leader>gG"] = { "<cmd>Telescope git_bcommits<cr>", desc = "Find commit history in all files" },
+    ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -48,7 +47,7 @@ return {
   },
   i = {
     ["<C-f>"] = { "<C-g>U<ESC><S-a>" },
-    ["<C-j>"] = { "<Plug>(skkeleton-toggle)" },
+    ["jk"] = { "<Plug>(skkeleton-toggle)" },
   },
   v = {
     -- visual mode key mapping
