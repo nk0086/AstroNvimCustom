@@ -103,8 +103,8 @@ return {
     augroup END
     ]])
 
-    vim.api.nvim_command('command! Test execute "!cargo compete test "..expand("%<")')
-    vim.api.nvim_command('command! Submit execute "!cargo compete submit "..expand("%<")')
+    vim.api.nvim_command('command! Test execute "!cargo compete test %<"')
+    vim.api.nvim_command('command! Submit execute "!cargo compete submit %<"')
     vim.api.nvim_command('command! Open execute "!cargo compete open')
   end,
 }
