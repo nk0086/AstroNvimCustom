@@ -94,12 +94,17 @@ return {
       filetype = { 'html' },
       input = { 't' },
     })
-  end,
 
-  vim.cmd([[
-  augroup GptCommitMsg
-      autocmd!
-      autocmd VimEnter * let g:gpt_commit_msg = get(g:, 'gpt_commit_msg', {}) | let g:gpt_commit_msg['api_key'] = $OPENAI_API_KEY
-  augroup END
-  ]]),
+    -- auto gpt-commit
+    vim.cmd([[
+    augroup GptCommitMsg
+        autocmd!
+        autocmd VimEnter * let g:gpt_commit_msg = get(g:, 'gpt_commit_msg', {}) | let g:gpt_commit_msg['api_key'] = $OPENAI_API_KEY
+    augroup END
+    ]])
+
+    vim.api.nvim_command('command! Test execute "!cargo compete test "..expand("%<")')
+    vim.api.nvim_command('command! Submit execute "!cargo compete submit "..expand("%<")')
+    vim.api.nvim_command('command! Open execute "!cargo compete open "..expand("%<")')
+  end,
 }
