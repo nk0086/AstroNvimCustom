@@ -106,6 +106,5 @@ return {
     vim.api.nvim_command('command! Test execute "!cargo compete test "..expand("%:t:r")')
     vim.api.nvim_command('command! Submit execute "!cargo compete submit "..expand("%:t:r")')
     vim.api.nvim_command('command! Open execute "!cargo compete open "..expand("%:t:r")')
-    require("user.mappings")
   end,
 }
