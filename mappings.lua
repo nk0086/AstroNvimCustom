@@ -47,7 +47,6 @@ return {
   },
   i = {
     ["<C-f>"] = { "<C-g>U<ESC><S-a>" },
-    ["jk"] = { "<Plug>(skkeleton-toggle)" },
   },
   v = {
     -- visual mode key mapping

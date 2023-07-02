@@ -35,21 +35,14 @@ return {
   },
 
   {
-    "vim-skk/skkeleton",
+    "vim-skk/eskk.vim",
     lazy = false,
-    dependencies = { "vim-denops/denops.vim" },
     init = function()
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "skkeleton-initialize-pre",
-        callback = function()
-          vim.fn["skkeleton#config"] {
-            eggLikeNewline = true,
-            globalDictionaries = {
-              "~/.config/eskk/SKK-JISYO.L",
-            },
-          }
-        end,
-      })
+      vim.api.nvim_command("let g:eskk#directory = '~/.config/eskk'")
+      vim.api.nvim_command("let g:eskk#egglike_newline = 1")
+      vim.api.nvim_command("let g:eskk#global_dictionaries = ['~/.config/eskk/SKK-JISYO.L']")
+      vim.api.nvim_command(
+        "let g:eskk#dictionary = { 'path': g:eskk#directory.'/my_jisyo', 'sorted': 1, 'encoding': 'utf-8',}")
     end,
   },
 
