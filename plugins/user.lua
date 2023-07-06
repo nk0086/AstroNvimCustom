@@ -87,4 +87,10 @@ return {
     version = "*",
     event = "VeryLazy",
   },
+
+  {
+    "ToruNiina/satysfi.vim",
+    version = "*",
+    event = "VeryLazy",
+  }
 }
