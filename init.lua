@@ -56,7 +56,7 @@ return {
 
   -- Configure require("lazy").setup() options
   lazy = {
-    defaults = { lazy = true },
+    defaults = { lazy = true},
     performance = {
       rtp = {
         -- customize default disabled vim plugins
@@ -109,6 +109,7 @@ return {
     -- set filetype for .satysfi
     vim.cmd [[
       autocmd BufRead,BufNewFile *.saty set filetype=satysfi
+      autocmd BufWritePost *.saty silent !satysfi % > /dev/null
     ]]
   end,
 }
