@@ -87,13 +87,13 @@ return {
     vim.g.gpt_commit_msg.api_key = vim.fn.getenv("OPENAI_API_KEY")
     vim.g.copilot_filetypes = { gitcommit = true }
     -- vim-sandwich
-    vim.g['sandwich#recipes'] = {}
-    table.insert(vim.g['sandwich#recipes'], {
-      external = { 'it', 'at' },
-      noremap = 1,
-      filetype = { 'html' },
-      input = { 't' },
-    })
+    -- vim.g['sandwich#recipes'] = {}
+    -- table.insert(vim.g['sandwich#recipes'], {
+    --   external = { 'it', 'at' },
+    --   noremap = 1,
+    --   filetype = { 'html' },
+    --   input = { 't' },
+    -- })
 
     -- auto gpt-commit
     vim.cmd([[
@@ -109,6 +109,11 @@ return {
     -- set filetype for .satysfi
     vim.cmd [[
       autocmd BufRead,BufNewFile *.saty set filetype=satysfi
+    ]]
+
+    -- golang tab
+    vim.cmd [[
+      autocmd FileType go setlocal tabstop=4 shiftwidth=4 softtabstop=4 noexpandtab
     ]]
   end,
 }

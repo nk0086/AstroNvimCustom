@@ -92,5 +92,11 @@ return {
     "ToruNiina/satysfi.vim",
     version = "*",
     event = "VeryLazy",
+  },
+
+  {
+    "fatih/vim-go",
+    version = "*",
+    event = "VeryLazy",
   }
 }
