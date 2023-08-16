@@ -98,5 +98,24 @@ return {
     "fatih/vim-go",
     version = "*",
     event = "VeryLazy",
-  }
+  },
+
+  {
+    "nvim-telescope/telescope-media-files.nvim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "nvim-lua/popup.nvim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "iberianpig/tig-explorer.vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+  
 }
