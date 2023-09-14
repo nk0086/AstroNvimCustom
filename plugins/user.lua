@@ -47,6 +47,12 @@ return {
   },
 
   {
+    "nk0086/judge-helper",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
     "rhysd/clever-f.vim",
     version = "*",
     event = "VeryLazy",
@@ -84,6 +90,12 @@ return {
 
   {
     "mattn/emmet-vim",
+    version = "*",
+    event = "VeryLazy",
+  },
+
+  {
+    "mattn/vim-maketable",
     version = "*",
     event = "VeryLazy",
   },
