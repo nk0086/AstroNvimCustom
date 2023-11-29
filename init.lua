@@ -102,6 +102,8 @@ return {
       vim.fn.termopen(command)
     end
 
+    -- set noswapfile
+    vim.o.swapfile = false
     -- gpt-commit-msg
     vim.g.gpt_commit_msg = vim.empty_dict()
     vim.g.gpt_commit_msg.api_key = vim.fn.getenv("OPENAI_API_KEY")
