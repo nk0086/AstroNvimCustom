@@ -107,7 +107,7 @@ return {
     -- gpt-commit-msg
     vim.g.gpt_commit_msg = vim.empty_dict()
     vim.g.gpt_commit_msg.api_key = vim.fn.getenv("OPENAI_API_KEY")
-    vim.g.copilot_filetypes = { gitcommit = true, markdown = true, yaml = true}
+    -- vim.g.copilot_filetypes = { gitcommit = true, markdown = true, yaml = true}
     -- vim-sandwich
     -- vim.g['sandwich#recipes'] = {}
     -- table.insert(vim.g['sandwich#recipes'], {

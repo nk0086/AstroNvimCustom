@@ -35,6 +35,9 @@ return {
     -- gitcommit enables copilot for git commit messages
     "copilot.lua",
     opts = {
+      integrations = {
+        gitcommit = true,
+      },
       suggestion = {
         keymap = {
           accept = "<C-l>",
