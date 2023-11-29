@@ -82,10 +82,30 @@ return {
     --   },
     -- }
 
+    local function open_floating_window(command)
+      local width = math.floor(vim.o.columns * 0.8)
+      local height = math.floor(vim.o.lines * 0.8)
+      local row = math.floor((vim.o.lines - height) / 2)
+      local col = math.floor((vim.o.columns - width) / 2)
+
+      local bufnr = vim.api.nvim_create_buf(false, true)
+      local winid = vim.api.nvim_open_win(bufnr, true, {
+          relative = 'editor',
+          width = width,
+          height = height,
+          row = row,
+          col = col,
+          style = 'minimal',
+          border = 'rounded'
+      })
+
+      vim.fn.termopen(command)
+    end
+
     -- gpt-commit-msg
     vim.g.gpt_commit_msg = vim.empty_dict()
     vim.g.gpt_commit_msg.api_key = vim.fn.getenv("OPENAI_API_KEY")
-    vim.g.copilot_filetypes = { gitcommit = true }
+    vim.g.copilot_filetypes = { gitcommit = true, markdown = true, yaml = true}
     -- vim-sandwich
     -- vim.g['sandwich#recipes'] = {}
     -- table.insert(vim.g['sandwich#recipes'], {
@@ -103,9 +123,22 @@ return {
     augroup END
     ]])
 
-    vim.api.nvim_command('command! Test execute "!cargo compete test "..expand("%:t:r")')
-    vim.api.nvim_command('command! Submit execute "!cargo compete submit "..expand("%:t:r")')
+    -- vim.api.nvim_command('command! Test execute "!cargo compete test "..expand("%:t:r")')
+    -- vim.api.nvim_command('command! Submit execute "!cargo compete submit "..expand("%:t:r")')
     vim.api.nvim_command('command! Open execute "!cargo compete open "..expand("%:t:r")')
+    vim.api.nvim_create_user_command('Test', function()
+      local current_file = vim.fn.expand('%:t:r')
+      local command = string.format('cargo compete test %s', current_file)
+      open_floating_window(command)
+    end, {})
+    
+    vim.api.nvim_create_user_command('Sub', function()
+      local current_file = vim.fn.expand('%:t:r')
+      local command = string.format('cargo compete submit %s', current_file)
+      open_floating_window(command)
+    end, {})
+ 
+
     -- set filetype for .satysfi
     vim.cmd [[
       autocmd BufRead,BufNewFile *.saty set filetype=satysfi
