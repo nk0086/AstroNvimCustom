@@ -37,6 +37,7 @@ return {
     opts = {
       integrations = {
         gitcommit = true,
+        markdown = true,
       },
       suggestion = {
         keymap = {
