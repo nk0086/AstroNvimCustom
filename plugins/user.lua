@@ -40,7 +40,7 @@ return {
     init = function()
       vim.api.nvim_command("let g:eskk#directory = '~/.config/eskk'")
       vim.api.nvim_command("let g:eskk#egglike_newline = 1")
-      vim.api.nvim_command("let g:eskk#global_dictionaries = ['~/.config/eskk/SKK-JISYO.L']")
+      vim.api.nvim_command("let g:eskk#global_dictionaries = '~/.config/eskk/SKK-JISYO.L'")
       vim.api.nvim_command(
         "let g:eskk#dictionary = { 'path': g:eskk#directory.'/my_jisyo', 'sorted': 1, 'encoding': 'utf-8',}")
     end,
@@ -129,5 +129,15 @@ return {
     version = "*",
     event = "VeryLazy",
   },
-  
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+      vim.g.mkdp_auto_close = 0
+    end,
+    ft = { "markdown" },
+  },
 }

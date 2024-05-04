@@ -40,6 +40,9 @@ return {
     ["<leader>gg"] = { "<cmd>Telescope git_commits<cr>", desc = "Find a commit history in current file" },
     ["<leader>gG"] = { "<cmd>Telescope git_bcommits<cr>", desc = "Find commit history in all files" },
     ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
+
+    -- markdown-preview
+    ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" },
   },
   t = {
     -- setting a mapping to false will disable it
