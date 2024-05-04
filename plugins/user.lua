@@ -140,4 +140,10 @@ return {
     end,
     ft = { "markdown" },
   },
+
+  {
+    "xavierchow/vim-swagger-preview",
+    version = "*",
+    event = "VeryLazy",
+  },
 }

@@ -43,6 +43,8 @@ return {
 
     -- markdown-preview
     ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" },
+    -- vim swagger
+    ["<leader>sp"] = { "<Plug>GenerateDiagram", desc = "Generate Swagger Diagram"},
   },
   t = {
     -- setting a mapping to false will disable it
