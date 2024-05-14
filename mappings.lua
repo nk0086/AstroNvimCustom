@@ -45,6 +45,14 @@ return {
     ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" },
     -- vim swagger
     ["<leader>sp"] = { "<Plug>GenerateDiagram", desc = "Generate Swagger Diagram"},
+    -- Copilot Chat
+    ["<leader>a"] = { name = "Copilot Chat"},
+    ["<leader>ae"] = { "<cmd>CopilotChatExplain<cr>", desc = "Copilotchat - Explain code"},
+    ["<leader>at"] = { "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests"},
+    ["<leader>ao"] = { "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Open Chat"},
+    ["<leader>ar"] = { "<cmd>CopilotChatReset<cr>", desc = "CopilotChat - Reset Chat"},
+    ["<leader>af"] = { "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix diagnostic"},
+
   },
   t = {
     -- setting a mapping to false will disable it
