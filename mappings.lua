@@ -39,7 +39,9 @@ return {
     -- telescope
     ["<leader>gg"] = { "<cmd>Telescope git_commits<cr>", desc = "Find a commit history in current file" },
     ["<leader>gG"] = { "<cmd>Telescope git_bcommits<cr>", desc = "Find commit history in all files" },
-    ["<leader>gn"] = { "<Cmd>Neogit<cr>", desc = "Neogit" },
+    ["<leader>gn"] = { "<cmd>Neogit<cr>", desc = "Neogit" },
+    ["<leader>gt"] = { "<cmd>TigOpenProjectRootDir<cr>", desc = "Open tig with Project root path"},
+    ["<leader>gT"] = { "<cmd>TigOpenCurrentFile<cr>", desc = "Open tig with current file"},
 
     -- markdown-preview
     ["<leader>mp"] = { "<cmd>MarkdownPreviewToggle<cr>", desc = "Markdown Preview" },
