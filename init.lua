@@ -136,7 +136,7 @@ return {
     
     vim.api.nvim_create_user_command('Sub', function()
       local current_file = vim.fn.expand('%:t:r')
-      local command = string.format('cargo compete submit %s', current_file)
+      local command = string.format('cargo compete submit %s --no-test', current_file)
       open_floating_window(command)
     end, {})
  
