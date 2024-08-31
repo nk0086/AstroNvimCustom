@@ -130,13 +130,13 @@ return {
     vim.api.nvim_command('command! Open execute "!cargo compete open --bin "..expand("%:t:r")')
     vim.api.nvim_create_user_command('Test', function()
       local current_file = vim.fn.expand('%:t:r')
-      local command = string.format('cargo compete test %s', current_file)
+      local command = string.format('cargo atcoder test %s', current_file)
       open_floating_window(command)
     end, {})
     
     vim.api.nvim_create_user_command('Sub', function()
       local current_file = vim.fn.expand('%:t:r')
-      local command = string.format('cargo compete submit %s --no-test', current_file)
+      local command = string.format('cargo atcoder submit %s', current_file)
       open_floating_window(command)
     end, {})
  
