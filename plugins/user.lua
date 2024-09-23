@@ -170,9 +170,9 @@ return {
     lazy = false,
     version = false, -- set this if you want to always pull the latest change
     opts = {
-      provider = "claude",
-      claude = {
-        api_key_name = "ANTHROPIC_API_KEY", -- the shell command must prefixed with `^cmd:(.*)`
+      provider = "openai",
+      openai = {
+        api_key_name = "OPENAI_API_KEY", -- the shell command must prefixed with `^cmd:(.*)`
       }
       -- add any opts here
     },
