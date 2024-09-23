@@ -29,33 +29,33 @@ return {
       },
     },
   },
-  { import = "astrocommunity.completion.copilot-lua" },
-  {
-    -- further customize the options set by the community
-    -- gitcommit enables copilot for git commit messages
-    "copilot.lua",
-    opts = {
-      integrations = {
-        gitcommit = true,
-        markdown = true,
-      },
-      suggestion = {
-        keymap = {
-          accept = "<C-l>",
-          accept_word = false,
-          accept_line = false,
-          next = "<C-.>",
-          prev = "<C-,>",
-          dismiss = "<C/>",
-        },
-      },
-    },
-  },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  -- {
+  --   -- further customize the options set by the community
+  --   -- gitcommit enables copilot for git commit messages
+  --   "copilot.lua",
+  --   opts = {
+  --     integrations = {
+  --       gitcommit = true,
+  --       markdown = true,
+  --     },
+  --     suggestion = {
+  --       keymap = {
+  --         accept = "<C-l>",
+  --         accept_word = false,
+  --         accept_line = false,
+  --         next = "<C-.>",
+  --         prev = "<C-,>",
+  --         dismiss = "<C/>",
+  --       },
+  --     },
+  --   },
+  -- },
   { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
   {
     "m4xshen/smartcolumn.nvim",
     opts = {
-      colorcolumn = 120,
+      colorcolumn = "120",
       disabled_filetypes = { "help" },
     },
   }
