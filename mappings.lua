@@ -30,7 +30,9 @@ return {
 
     -- split
     ["<C-s>"] = { "<C-w>v", desc = "Split window vertically" },
-    ["<C-t>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Toggle vertical terminal" },
+    -- ["<C-t>"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "Toggle vertical terminal" },
+
+    ["<leader>t"] = { "<cmd>ToggleTerm float<cr>", desc = "ToggleTerm float"},
 
     -- vim-visual-multi
     ["<A-k>"] = { "<cmd>call vm#commands#add_cursor_up(0, v:count1)<cr>" },
